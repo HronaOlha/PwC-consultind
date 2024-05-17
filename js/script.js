@@ -1,37 +1,13 @@
-setCookie = (cName, cValue, expDate) => {
-  let date = new Date();
-  date.setTime(date.getTime() + expDate * 24 * 60 * 60 * 1000);
-  const expires = "expires=" + date.toUTCString();
-  document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
-};
+// Burger menu
+function showSidebar() {
+  const sidebar = document.querySelector(".sidebar");
+  sidebar.style.right = "0";
+}
 
-getCookie = (cName) => {
-  const name = cName + "=";
-  const cDecoded = decodeURIComponent(document.cookie);
-  const cArr = cDecoded.split("; ");
-  let value;
-  cArr.forEach((val) => {
-    if (val.indexOf(name) === 0) value = val.substring(name.length);
-  });
-
-  return value;
-};
-
-document.querySelector(".cookie_btn").addEventListener("click", () => {
-  document.querySelector(".cookie").classList.add("visually-hidden");
-
-  setCookie("cookie", true, 3);
-});
-
-cookieMessage = () => {
-  if (!getCookie("cookie")) {
-    setTimeout(() => {
-      document.querySelector(".cookie").classList.remove("visually-hidden");
-    }, 5000);
-  }
-};
-
-window.addEventListener("load", cookieMessage);
+function hideSidebar() {
+  const sidebar = document.querySelector(".sidebar");
+  sidebar.style.right = "-800px";
+}
 
 // Form submit
 
@@ -78,3 +54,40 @@ var swiper = new Swiper(".slide-content", {
     },
   },
 });
+
+// Cookie
+
+setCookie = (cName, cValue, expDate) => {
+  let date = new Date();
+  date.setTime(date.getTime() + expDate * 24 * 60 * 60 * 1000);
+  const expires = "expires=" + date.toUTCString();
+  document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+};
+
+getCookie = (cName) => {
+  const name = cName + "=";
+  const cDecoded = decodeURIComponent(document.cookie);
+  const cArr = cDecoded.split("; ");
+  let value;
+  cArr.forEach((val) => {
+    if (val.indexOf(name) === 0) value = val.substring(name.length);
+  });
+
+  return value;
+};
+
+document.querySelector(".cookie_btn").addEventListener("click", () => {
+  document.querySelector(".cookie").classList.add("visually-hidden");
+
+  setCookie("cookie", true, 3);
+});
+
+cookieMessage = () => {
+  if (!getCookie("cookie")) {
+    setTimeout(() => {
+      document.querySelector(".cookie").classList.remove("visually-hidden");
+    }, 5000);
+  }
+};
+
+window.addEventListener("load", cookieMessage);

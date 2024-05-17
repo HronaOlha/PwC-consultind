@@ -138,9 +138,16 @@ nav {
   width: max-content;
   display: flex;
   align-items: center;
-  padding: 8px 14px;
+  padding: 8px;
+  /* width: 200px; */
   border-radius: 28px;
   background-color: var(--bg-color);
+}
+
+@media (max-width: 768px) {
+  .search {
+    width: 200px;
+  }
 }
 
 .search_button {
@@ -164,6 +171,68 @@ nav {
 }
 
 /* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -800px;
+  height: 100vh;
+  width: 250px;
+  background-color: var(--bg-color);
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 500ms ease-in-out;
+
+  /* display: none; */
+}
+
+.sidebar_btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar_open-btn {
+  display: none;
+}
+.sidebar_close-btn {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    right: -800px;
+
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .sidebar_open-btn {
+    display: block;
+  }
+}
+
+.sidebar_list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+}
+
+.sidebar_list-item {
+  width: 100%;
+  cursor: pointer;
+}
+
+.sidebar_list-item > a {
+  display: block;
+  width: 100%;
+}
 
 /* Hero */
 

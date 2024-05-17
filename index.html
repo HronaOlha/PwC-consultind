@@ -1,317 +1,333 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./public/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/intlTellInput.css" />
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./public/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/intlTellInput.css" />
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
 
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Ihr Erfolg ist unsere Mission" />
-        <meta property="og:title" content="PwC Consulting" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="./public/og_img.jpg" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Ihr Erfolg ist unsere Mission" />
+  <meta property="og:title" content="PwC Consulting" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./public/og_img.jpg" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="PwC Consulting" />
-    <meta name="twitter:description" content="Ihr Erfolg ist unsere Mission" />
-    <meta name="twitter:image:src" content="./public/og_img.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PwC Consulting" />
+  <meta name="twitter:description" content="Ihr Erfolg ist unsere Mission" />
+  <meta name="twitter:image:src" content="./public/og_img.jpg" />
 
-    <title>Consulting service</title>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <nav>
-          <a href="/"><img src="./img/PwC-logo.svg" alt="pwc logo" /></a>
+  <title>Consulting service</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="/"><img src="./img/PwC-logo.svg" alt="pwc logo" /></a>
+        <div class="sidebar">
+          <button class="sidebar_close-btn sidebar_btn" type="button" onclick=hideSidebar()>
+            <span class="material-symbols-outlined">
+              close
+            </span>
+          </button>
           <ul class="sidebar_list">
-            <li class="nav_list-link"><a href="#blog">Blog</a></li>
-            <li class="nav_list-link"><a href="#map">Kontakte</a></li>
-            <li class="nav_list-link"><a href="/">FAQ</a></li>
-            <li class="nav_list-link"><a href="#about">Über uns</a></li>
-          </ul>
-          <ul class="nav_list">
-            <li class="nav_list-link"><a href="#blog">Blog</a></li>
-            <li class="nav_list-link"><a href="#map">Kontakte</a></li>
-            <li class="nav_list-link"><a href="/">FAQ</a></li>
-            <li class="nav_list-link"><a href="#about">Über uns</a></li>
-          </ul>
-          <form class="search">
-            <button class="search_button" type="submit">
-              <span class="material-symbols-outlined"> search </span>
-            </button>
-            <input class="search_input" type="text" placeholder="Suchen" />
-          </form>
-        </nav>
-      </div>
-      
-    </header>
-    <main>
-      <section class="hero">
-        <div class="container">
-          <h1 class="hero_title">Herzlich Willkommen bei PwC</h1>
-          <p class="hero_text">Ihr Erfolg ist unsere Mission</p>
-        </div>
-      </section>
-
-      <section class="benefits">
-        <div class="container">
-          <h2 class="visually-hidden">Benefits</h2>
-          <ul class="benefits-list list">
-            <li class="benefits-items">
-              <div class="icon-wrap">
-                <svg class="icon" width="70" height="70">
-                  <use href="./img/sprite.svg#antenna"></use>
-                </svg>
-              </div>
-              <h3 class="benefits-title">Detailgenauigkeit</h3>
-              <p>
-                Wir legen großen Wert auf Präzision und Aufmerksamkeit für
-                Details, um die besten Lösungen für unsere Kunden zu finden.
-              </p>
-            </li>
-            <li class="benefits-items">
-              <div class="icon-wrap">
-                <svg class="icon" width="70" height="70">
-                  <use href="./img/sprite.svg#diagram"></use>
-                </svg>
-              </div>
-              <h3 class="benefits-title">Planung</h3>
-              <p>
-                Unsere umfassende Planungsmethodik ermöglicht es uns, klare
-                Ziele zu setzen und strategische Wege zu entwickeln, um diese zu
-                erreichen. Wir nehmen uns die Zeit, um eine solide Grundlage für
-                den Erfolg unserer Kunden zu schaffen.
-              </p>
-            </li>
-            <li class="benefits-items">
-              <div class="icon-wrap">
-                <svg class="icon" width="70" height="70">
-                  <use href="./img/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <h3 class="benefits-title">Pünktlichkeit</h3>
-              <p>
-                Pünktlichkeit ist für uns von größter Bedeutung. Wir halten uns
-                strikt an Zeitpläne, um sicherzustellen, dass Projekte
-                rechtzeitig und effizient abgeschlossen werden.
-              </p>
-            </li>
-            <li class="benefits-items">
-              <div class="icon-wrap">
-                <svg class="icon" width="70" height="70">
-                  <use href="./img/sprite.svg#astronaut"></use>
-                </svg>
-              </div>
-              <h3 class="benefits-title">Moderne Technologien</h3>
-              <p>
-                Wir setzen auf innovative und zeitgemäße Technologien, um
-                unseren Kunden stets die bestmöglichen Lösungen zu bieten. Wir
-                bleiben stets am Puls der Zeit, um sicherzustellen, dass wir die
-                neuesten Entwicklungen und Trends nutzen können.
-              </p>
-            </li>
+            <li class="nav_list-link sidebar_list-item"><a href="#blog">Blog</a></li>
+            <li class="nav_list-link sidebar_list-item"><a href="#map">Kontakte</a></li>
+            <li class="nav_list-link sidebar_list-item"><a href="/">FAQ</a></li>
+            <li class="nav_list-link sidebar_list-item"><a href="#about">Über uns</a></li>
           </ul>
         </div>
-      </section>
+        <ul class="nav_list hideOnMobile">
+          <li class="nav_list-link"><a href="#blog">Blog</a></li>
+          <li class="nav_list-link"><a href="#map">Kontakte</a></li>
+          <li class="nav_list-link"><a href="/">FAQ</a></li>
+          <li class="nav_list-link"><a href="#about">Über uns</a></li>
+        </ul>
+        <form class="search ">
+          <button class="search_button" type="submit">
+            <span class="material-symbols-outlined"> search </span>
+          </button>
+          <input class="search_input" type="text" placeholder="Suchen" />
+        </form>
 
-      <section id="about" class="about">
-        <div class="container">
-          <h2 class="about_title">Über uns</h2>
-          <p class="about_text">
-            Wir sind eine führende Beratungsfirma, die sich darauf spezialisiert
-            hat, Unternehmen dabei zu helfen, ihre Ziele zu erreichen und ihr
-            volles Potenzial auszuschöpfen. Seit unserer Gründung haben wir uns
-            dem Erfolg unserer Kunden verschrieben.
-          </p>
-          <p class="about_text">
-            Unser engagiertes Team besteht aus hochqualifizierten Experten, die
-            über langjährige Erfahrung in verschiedenen Branchen verfügen. Wir
-            bieten maßgeschneiderte Lösungen und einen ganzheitlichen Ansatz, um
-            den individuellen Anforderungen jedes Unternehmens gerecht zu
-            werden.
-          </p>
-          <p class="about_text">
-            Bei PwC stehen Kundenzufriedenheit und Exzellenz an erster Stelle.
-            Wir arbeiten eng mit unseren Kunden zusammen, um ihre Bedürfnisse zu
-            verstehen und innovative Strategien zu entwickeln, die ihnen einen
-            Wettbewerbsvorteil verschaffen.
-          </p>
-          <p class="about_text">
-            Unser Ziel ist es, langfristige Partnerschaften aufzubauen und
-            unseren Kunden nachhaltigen Mehrwert zu bieten. Wir freuen uns
-            darauf, mit Ihnen zusammenzuarbeiten und Sie auf Ihrem Weg zum
-            Erfolg zu unterstützen.
-          </p>
-        </div>
-      </section>
+          <button class="sidebar_open-btn sidebar_btn" type="button" onclick=showSidebar()>
+            <span class="material-symbols-outlined">
+              menu
+            </span>
+          </button>
+      </nav>
+    </div>
 
-      <section id="map" class="map">
-        <h2 class="visually-hidden">Karte und Kontakte</h2>
-        <div class="container">
-          <div class="map_container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10806.757178785141!2d8.528296698394179!3d47.37898235921841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a00f4f465d7%3A0x33e6a93560f11e29!2sPremium%20Business%20Center%20Bellevue%20GmbH!5e0!3m2!1suk!2sua!4v1715788902467!5m2!1suk!2sua"
-              width="100%"
-              height="100%"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-          <div>
-            <h2 class="map_title">Kontakte</h2>
-            <address>
-              <ul>
-                <li class="map_address-item">
-                  <p>Schifflände 26, 8001 Zürich, Schweiz</p>
-                </li>
-                <li class="map_address-item">
-                  <a href="tel:+41449876543">+41 (44) 987 65 43</a>
-                </li>
-                <li class="map_address-item">
-                  <a href="mailto:info@pwc-beratung.ch">info@pwc-beratung.ch</a>
-                </li>
-              </ul>
-            </address>
-          </div>
-        </div>
-      </section>
-
-
-        <section class="contact_us">
-          <div class=" container">
-            <h2 class="contact__title">Hinterlassen Sie Ihre Daten, wir werden uns mit Ihnen in Verbindung setzen</h2>
-            <form id="contactForm" class="contact__form">
-
-                  <label for="user-name" class="contact__label">Name</label>
-                    <input
-                      type="text"
-                      name="user-name"
-                      class="contact__input"
-                      id="name"
-                      required
-                    />
-
-
-
-                  <label for="user-tel" class="contact__label">Telefon</label>
-                    <input
-                      type="tel"
-                      name="user-tel"
-                      class="contact__input phone"
-                      id="tel"
-                      required
-                    />
-
-
-                    <label for="user-mail" class="contact__label">E-Mail</label>
-                      <input
-                        type="email"
-                        name="user-mail"
-                        class="contact__input"
-                        id="email"
-                        required
-                      />
-
-              <button type="submit" class="contact__btn-submit btn">
-                Schicken
-              </button>
-            </form>
-
-        </section>
-
-        <section id="blog" class="blog">
-          <div class="container">
-            <h2 class="blog_title">Blog</h2>
-            <div class="swiper">
-              <div class="slide-content">
-                <div class="blog_list swiper-wrapper">
-                  <div class="blog_item swiper-slide">
-                    <h4 class="blog-slide_title">Die Bedeutung von Detailgenauigkeit im Projektmanagement</h4>
-                    <p class="blog-text">Im Projektmanagement sind die kleinen Details oft genauso wichtig wie die großen Schritte. Eine sorgfältige Planung und Überprüfung der Details kann den Unterschied zwischen einem erfolgreichen und einem gescheiterten Projekt ausmachen. Erfahren Sie, wie unsere Berater Ihnen helfen können, jedes Detail zu perfektionieren und Ihre Projekte erfolgreich abzuschließen.</p>
-                  <div class="blog-link_wrap"><a class="blog-link" href="/">Read more</a></div>
-                  </div>
-                  <div class="blog_item swiper-slide">
-                    <h4 class="blog-slide_title">Pünktlichkeit als Schlüssel zum Geschäftserfolg</h4>
-                    <p class="blog-text">Pünktlichkeit ist nicht nur eine Tugend, sondern auch ein entscheidender Erfolgsfaktor im Geschäftsleben. Unternehmen, die Termine einhalten, genießen ein höheres Vertrauen bei Kunden und Partnern. In diesem Artikel zeigen wir Ihnen, wie Sie durch pünktliche Abläufe Ihre Geschäftsergebnisse verbessern können.</p>
-                  <div class="blog-link_wrap"><a class="blog-link" href="/">Read more</a></div>
-                  
-                  </div>
-                  <div class="blog_item swiper-slide">
-                    <h4 class="blog-slide_title">Effektives Planen für nachhaltiges Wachstum</h4>
-                    <p class="blog-text">Illum cum excepturi eum sit neque consequatur? Ipsam aperiam ea voluptatibus earum error quis obcaecati laboriosam molestiae doloribus amet ullam officiis quas praesentium ratione, inventore possimus illo cum rerum minus placeat, asperiores nihil aspernatur? Obcaecati maxime praesentium voluptate? Repudiandae soluta sunt facilis totam alias perspiciatis quasi ullam, minima explicabo, libero magnam illum sed nulla enim hic magni voluptate delectus officia itaque deserunt maxime? Magni inventore, nesciunt culpa veniam numquam at, porro quae earum eos illo eligendi reiciendis vero corrupti eius vel. Dolores quibusdam accusantium, minus eligendi quisquam sequi quasi tempore corporis quo iusto quod tempora assumenda non natus molestiae voluptatibus?</p>
-                  <div class="blog-link_wrap"><a class="blog-link" href="/">Read more</a></div>
-                  
-                  </div>
-                  <div class="blog_item swiper-slide">
-                    <h4 class="blog-slide_title">Moderne Technologien in der Unternehmensberatung</h4>
-                    <p class="blog-text">Technologie verändert die Art und Weise, wie wir arbeiten und Geschäfte führen. Unsere Berater nutzen die neuesten Technologien, um Ihnen innovative Lösungen anzubieten, die Ihre Effizienz steigern und Ihre Wettbewerbsfähigkeit erhöhen. Erfahren Sie mehr über die technologischen Trends, die Ihre Branche prägen, und wie Sie davon profitieren können.</p>
-                  <div class="blog-link_wrap"><a class="blog-link" href="/">Read more</a></div>
-                  
-                  </div>
-                  <div class="blog_item swiper-slide">
-                    <h4 class="blog-slide_title">Erfolgreiche Kommunikation im Team</h4>
-                    <p class="blog-text">Eine klare und effektive Kommunikation ist der Schlüssel zu einem produktiven und harmonischen Team. In diesem Artikel geben wir Ihnen Tipps und Techniken, wie Sie die Kommunikation in Ihrem Team verbessern können, um Missverständnisse zu vermeiden und die Zusammenarbeit zu fördern. Entdecken Sie, wie unsere Beratung Ihnen helfen kann, eine starke Kommunikationskultur in Ihrem Unternehmen zu etablieren.</p>
-                  <div class="blog-link_wrap"><a class="blog-link" href="/">Read more</a></div>
-                  
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <!-- <div class="swiper-pagination"></div> -->
-            </div>
-          </section>
-  
-          </div>
-        <div class="wrap">
-        <div class="cookie visually-hidden">
-          <p>
-            We use cookies to provide statistics that help us improve the
-            customization of our services and offerings. You can read more
-            information about cookies or changing your browser settings. By
-            continuing to use without changing your settings, you agree to our
-            use of cookies.
-          </p>
-          <button class="cookie_btn btn" type="button">I agree</button>
-        </div>
-        </div>
-      </div>
-    </main>
-    <footer>
+  </header>
+  <main>
+    <section class="hero">
       <div class="container">
-      <a class="footer_logo" href="/"><img src="./img/PwC-logo.svg" alt="pwc logo"/></a>
+        <h1 class="hero_title">Herzlich Willkommen bei PwC</h1>
+        <p class="hero_text">Ihr Erfolg ist unsere Mission</p>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <h2 class="visually-hidden">Benefits</h2>
+        <ul class="benefits-list list">
+          <li class="benefits-items">
+            <div class="icon-wrap">
+              <svg class="icon" width="70" height="70">
+                <use href="./img/sprite.svg#antenna"></use>
+              </svg>
+            </div>
+            <h3 class="benefits-title">Detailgenauigkeit</h3>
+            <p>
+              Wir legen großen Wert auf Präzision und Aufmerksamkeit für
+              Details, um die besten Lösungen für unsere Kunden zu finden.
+            </p>
+          </li>
+          <li class="benefits-items">
+            <div class="icon-wrap">
+              <svg class="icon" width="70" height="70">
+                <use href="./img/sprite.svg#diagram"></use>
+              </svg>
+            </div>
+            <h3 class="benefits-title">Planung</h3>
+            <p>
+              Unsere umfassende Planungsmethodik ermöglicht es uns, klare
+              Ziele zu setzen und strategische Wege zu entwickeln, um diese zu
+              erreichen. Wir nehmen uns die Zeit, um eine solide Grundlage für
+              den Erfolg unserer Kunden zu schaffen.
+            </p>
+          </li>
+          <li class="benefits-items">
+            <div class="icon-wrap">
+              <svg class="icon" width="70" height="70">
+                <use href="./img/sprite.svg#clock"></use>
+              </svg>
+            </div>
+            <h3 class="benefits-title">Pünktlichkeit</h3>
+            <p>
+              Pünktlichkeit ist für uns von größter Bedeutung. Wir halten uns
+              strikt an Zeitpläne, um sicherzustellen, dass Projekte
+              rechtzeitig und effizient abgeschlossen werden.
+            </p>
+          </li>
+          <li class="benefits-items">
+            <div class="icon-wrap">
+              <svg class="icon" width="70" height="70">
+                <use href="./img/sprite.svg#astronaut"></use>
+              </svg>
+            </div>
+            <h3 class="benefits-title">Moderne Technologien</h3>
+            <p>
+              Wir setzen auf innovative und zeitgemäße Technologien, um
+              unseren Kunden stets die bestmöglichen Lösungen zu bieten. Wir
+              bleiben stets am Puls der Zeit, um sicherzustellen, dass wir die
+              neuesten Entwicklungen und Trends nutzen können.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="about_title">Über uns</h2>
+        <p class="about_text">
+          Wir sind eine führende Beratungsfirma, die sich darauf spezialisiert
+          hat, Unternehmen dabei zu helfen, ihre Ziele zu erreichen und ihr
+          volles Potenzial auszuschöpfen. Seit unserer Gründung haben wir uns
+          dem Erfolg unserer Kunden verschrieben.
+        </p>
+        <p class="about_text">
+          Unser engagiertes Team besteht aus hochqualifizierten Experten, die
+          über langjährige Erfahrung in verschiedenen Branchen verfügen. Wir
+          bieten maßgeschneiderte Lösungen und einen ganzheitlichen Ansatz, um
+          den individuellen Anforderungen jedes Unternehmens gerecht zu
+          werden.
+        </p>
+        <p class="about_text">
+          Bei PwC stehen Kundenzufriedenheit und Exzellenz an erster Stelle.
+          Wir arbeiten eng mit unseren Kunden zusammen, um ihre Bedürfnisse zu
+          verstehen und innovative Strategien zu entwickeln, die ihnen einen
+          Wettbewerbsvorteil verschaffen.
+        </p>
+        <p class="about_text">
+          Unser Ziel ist es, langfristige Partnerschaften aufzubauen und
+          unseren Kunden nachhaltigen Mehrwert zu bieten. Wir freuen uns
+          darauf, mit Ihnen zusammenzuarbeiten und Sie auf Ihrem Weg zum
+          Erfolg zu unterstützen.
+        </p>
+      </div>
+    </section>
+
+    <section id="map" class="map">
+      <h2 class="visually-hidden">Karte und Kontakte</h2>
+      <div class="container">
+        <div class="map_container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10806.757178785141!2d8.528296698394179!3d47.37898235921841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a00f4f465d7%3A0x33e6a93560f11e29!2sPremium%20Business%20Center%20Bellevue%20GmbH!5e0!3m2!1suk!2sua!4v1715788902467!5m2!1suk!2sua"
+            width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div>
+          <h2 class="map_title">Kontakte</h2>
+          <address>
+            <ul>
+              <li class="map_address-item">
+                <p>Schifflände 26, 8001 Zürich, Schweiz</p>
+              </li>
+              <li class="map_address-item">
+                <a href="tel:+41449876543">+41 (44) 987 65 43</a>
+              </li>
+              <li class="map_address-item">
+                <a href="mailto:info@pwc-beratung.ch">info@pwc-beratung.ch</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="contact_us">
+      <div class=" container">
+        <h2 class="contact__title">Hinterlassen Sie Ihre Daten, wir werden uns mit Ihnen in Verbindung setzen</h2>
+        <form id="contactForm" class="contact__form">
+
+          <label for="user-name" class="contact__label">Name</label>
+          <input type="text" name="user-name" class="contact__input" id="name" required />
+
+
+
+          <label for="user-tel" class="contact__label">Telefon</label>
+          <input type="tel" name="user-tel" class="contact__input phone" id="tel" required />
+
+
+          <label for="user-mail" class="contact__label">E-Mail</label>
+          <input type="email" name="user-mail" class="contact__input" id="email" required />
+
+          <button type="submit" class="contact__btn-submit btn">
+            Schicken
+          </button>
+        </form>
+
+    </section>
+
+    <section id="blog" class="blog">
+      <div class="container">
+        <h2 class="blog_title">Blog</h2>
+        <div class="swiper">
+          <div class="slide-content">
+            <div class="blog_list swiper-wrapper">
+              <div class="blog_item swiper-slide">
+                <h4 class="blog-slide_title">Die Bedeutung von Detailgenauigkeit im Projektmanagement</h4>
+                <p class="blog-text">Im Projektmanagement sind die kleinen Details oft genauso wichtig wie die großen
+                  Schritte. Eine sorgfältige Planung und Überprüfung der Details kann den Unterschied zwischen einem
+                  erfolgreichen und einem gescheiterten Projekt ausmachen. Erfahren Sie, wie unsere Berater Ihnen helfen
+                  können, jedes Detail zu perfektionieren und Ihre Projekte erfolgreich abzuschließen.</p>
+                <div class="blog-link_wrap"><a class="blog-link" href="/">Read more</a></div>
+              </div>
+              <div class="blog_item swiper-slide">
+                <h4 class="blog-slide_title">Pünktlichkeit als Schlüssel zum Geschäftserfolg</h4>
+                <p class="blog-text">Pünktlichkeit ist nicht nur eine Tugend, sondern auch ein entscheidender
+                  Erfolgsfaktor im Geschäftsleben. Unternehmen, die Termine einhalten, genießen ein höheres Vertrauen
+                  bei Kunden und Partnern. In diesem Artikel zeigen wir Ihnen, wie Sie durch pünktliche Abläufe Ihre
+                  Geschäftsergebnisse verbessern können.</p>
+                <div class="blog-link_wrap"><a class="blog-link" href="/">Read more</a></div>
+
+              </div>
+              <div class="blog_item swiper-slide">
+                <h4 class="blog-slide_title">Effektives Planen für nachhaltiges Wachstum</h4>
+                <p class="blog-text">Illum cum excepturi eum sit neque consequatur? Ipsam aperiam ea voluptatibus earum
+                  error quis obcaecati laboriosam molestiae doloribus amet ullam officiis quas praesentium ratione,
+                  inventore possimus illo cum rerum minus placeat, asperiores nihil aspernatur? Obcaecati maxime
+                  praesentium voluptate? Repudiandae soluta sunt facilis totam alias perspiciatis quasi ullam, minima
+                  explicabo, libero magnam illum sed nulla enim hic magni voluptate delectus officia itaque deserunt
+                  maxime? Magni inventore, nesciunt culpa veniam numquam at, porro quae earum eos illo eligendi
+                  reiciendis vero corrupti eius vel. Dolores quibusdam accusantium, minus eligendi quisquam sequi quasi
+                  tempore corporis quo iusto quod tempora assumenda non natus molestiae voluptatibus?</p>
+                <div class="blog-link_wrap"><a class="blog-link" href="/">Read more</a></div>
+
+              </div>
+              <div class="blog_item swiper-slide">
+                <h4 class="blog-slide_title">Moderne Technologien in der Unternehmensberatung</h4>
+                <p class="blog-text">Technologie verändert die Art und Weise, wie wir arbeiten und Geschäfte führen.
+                  Unsere Berater nutzen die neuesten Technologien, um Ihnen innovative Lösungen anzubieten, die Ihre
+                  Effizienz steigern und Ihre Wettbewerbsfähigkeit erhöhen. Erfahren Sie mehr über die technologischen
+                  Trends, die Ihre Branche prägen, und wie Sie davon profitieren können.</p>
+                <div class="blog-link_wrap"><a class="blog-link" href="/">Read more</a></div>
+
+              </div>
+              <div class="blog_item swiper-slide">
+                <h4 class="blog-slide_title">Erfolgreiche Kommunikation im Team</h4>
+                <p class="blog-text">Eine klare und effektive Kommunikation ist der Schlüssel zu einem produktiven und
+                  harmonischen Team. In diesem Artikel geben wir Ihnen Tipps und Techniken, wie Sie die Kommunikation in
+                  Ihrem Team verbessern können, um Missverständnisse zu vermeiden und die Zusammenarbeit zu fördern.
+                  Entdecken Sie, wie unsere Beratung Ihnen helfen kann, eine starke Kommunikationskultur in Ihrem
+                  Unternehmen zu etablieren.</p>
+                <div class="blog-link_wrap"><a class="blog-link" href="/">Read more</a></div>
+
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </section>
+
+
+    <div class="wrap">
+      <div class="cookie visually-hidden">
+        <p>
+          We use cookies to provide statistics that help us improve the
+          customization of our services and offerings. You can read more
+          information about cookies or changing your browser settings. By
+          continuing to use without changing your settings, you agree to our
+          use of cookies.
+        </p>
+        <button class="cookie_btn btn" type="button">I agree</button>
+      </div>
+    </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <!-- <a class="footer_logo" href="/"><img src="./img/PwC-logo.svg" alt="pwc logo" /></a>
+       -->
+      <a class="footer_logo" href="/"><img src="./img/PwC-logo.svg" alt="pwc logo" /></a>
 
       <div class="footer_text">
         <a href="tel:+41449876543">+41 (44) 987 65 43</a>
         <p>Copyright ©2024 Alle Rechte vorbehalten</p>
-        <a class="footer_link" href="/">Datenschutzrichtlinie</a><span> | </span><a class="footer_link" href="/">Nutzungsbedingungen</a>
+        <a class="footer_link" href="/">Datenschutzrichtlinie</a><span> | </span><a class="footer_link"
+          href="/">Nutzungsbedingungen</a>
       </div>
     </div>
-    </footer>
+  </footer>
 
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/intlTellInput.js"></script>
-    <script> 
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/intlTellInput.js"></script>
+  <script>
     var input = document.querySelector(".phone");
-    window.intlTelInput(input,{});
-    </script>
-  </body>
+    window.intlTelInput(input, {});
+  </script>
+</body>
+
 </html>
